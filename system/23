@@ -1,0 +1,7 @@
+Definir un mot de passe pour l'utilisateur puis:
+
+Pour se connecter en session graphique:
+Sur gdm: cliquer Not listed? puis entrer utilisateur et mot de passe
+
+SSH:
+ssh luser@localhost
