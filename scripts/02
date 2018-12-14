@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+echo Name ?
+read name
+pkill --signal KILL -u $name
+userdel -f $name

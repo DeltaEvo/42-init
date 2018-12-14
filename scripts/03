@@ -1,0 +1,22 @@
+case $1 in
+starwars)
+	telnet towel.blinkenlights.nl;;
+parrot)
+	curl parrot.live;;
+pony)
+	dpkg -s 'ponysay' > /dev/null
+	if [ $? -ne 0 ] ; then
+		wget https://launchpad.net/~vincent-c/+archive/ubuntu/ponysay/+files/ponysay_3.0.2-1~ppa1~xenial1_all.deb -O ponysay.deb
+		dpkg -i ponysay.deb
+	fi
+	ponysay "I'm a unicorn";;
+cow)
+	dpkg -s 'cowsay' > /dev/null
+	if [ $? -ne 0 ] ; then
+		apt install -y cowsay
+	fi
+	cowsay "I'm a cow";;
+*)
+	echo "Usage: $0 [starwars, pony, cow, parrot]";;
+
+esac
